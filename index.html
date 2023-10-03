@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Encriptador de texto con Javascript para el Challenge ONE Sprint 01</title>
+	<link rel="stylesheet" type="text/css" href="src/css/tema.css">
+</head>
+<body>
+
+<header>
+	<img id="logo" src="src/svg/logo.svg" alt="logo">
+</header>
+
+<main>
+	<div id="entrada">		
+		<textarea id="txtOriginal" placeholder="Ingrese el texto aquí" onclick="fnRestablecerAlerta();" onkeypress="return fnLimitarCaracteres(event);"></textarea>
+		
+		<span id="mensaje">
+			<img src="src/img/info.png">
+			<span id="lblAlerta" class="error">Ingrese solo letras minúsculas sin acentos.</span>
+		</span>
+
+		<input type="button" class="texto boton boton_ml20" id="btnEncriptar" value="Encriptar" onclick="fnEncriptar('encode',document.getElementById('txtOriginal').value);" />
+		<input type="button" class="texto boton boton_ml20" id="btnDesencriptar" value="Desencriptar" onclick="fnEncriptar('decode',document.getElementById('txtOriginal').value);" />
+	</div>
+
+	<div id="salida">
+		<div id="txtModificado" value=""></div>
+		<input type="button" class="texto boton" id="btnCopiar" value="Copiar" onclick="fnCopiar();" />
+	</div>
+</main>
+
+<script src="src/js/validaciones.js"></script>
+<script src="src/js/encriptador.js"></script>
+
+</body>
+</html>

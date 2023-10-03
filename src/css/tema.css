@@ -1,0 +1,303 @@
+@import url('https://rsms.me/inter/inter.css');
+html
+{
+	font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal)
+{
+  html
+  {
+  	font-family: 'Inter var', sans-serif;
+  }
+}
+
+body
+{
+	background: #EFF1FA;
+}
+
+#logo
+{
+	position: absolute;
+	width: 120px;
+	height: 48px;	
+	top: 40px;
+	left: 84px;
+}
+
+#entrada
+{
+	position: absolute;
+	left: 240px;
+	top: 168px;
+}
+
+textarea
+{	
+	width: 650px;
+	height: 639px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 150%;
+	color: #0A3871;	
+	background: #EFF1FA;
+	border: none;
+	border-radius: 32px;
+	padding: 20px;
+	resize: none;
+}
+
+textarea:focus { 
+    outline: none !important;
+    border-color: transparent;
+    box-shadow: 0 0 10px #719ECE;
+ }
+
+textarea::-webkit-input-placeholder {
+  color: #0A3871;
+}
+
+textarea:-moz-placeholder { /* Firefox 18- */
+  color: #0A3871;  
+}
+
+textarea::-moz-placeholder {  /* Firefox 19+ */
+  color: #0A3871;  
+}
+
+textarea:-ms-input-placeholder {
+  color: #0A3871;  
+}
+
+textarea::placeholder {
+  color: #0A3871;  
+}
+
+#mensaje
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 8px;
+	margin: 10px 0px 10px 0px;
+}
+
+.error
+{
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 150%;
+	color: #495057;
+	opacity: 0.8;
+}
+
+#salida
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+	position: absolute;
+	width: 400px;
+	min-height: 944px;
+	left: 1000px;
+	top: 40px;
+	background: #FFFFFF;
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+	border-radius: 32px;
+}
+
+#txtModificado
+{
+	width: 336px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 150%;
+	color: #495057;	
+	margin-top: 30px;
+}
+
+.texto
+{
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	color: #0A3871;
+}
+
+.boton
+{	
+	padding: 24px;
+	width: 328px;
+	height: 67px;	
+	border: 1px solid #0A3871;
+	border-radius: 24px;	
+	cursor: pointer;
+}
+
+#btnEncriptar
+{
+	background: #0A3871;
+	color: #FFFFFF;	
+}
+
+#btnDesencriptar
+{
+	background: #D8DFE8;
+}
+
+#btnCopiar
+{
+	background: #FFFFFF;
+}
+
+/* 
+  Tablets, Ipads (Portrait)
+  768px to 1024px
+*/
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+	#logo
+	{
+		height: 45px;
+		top: 73.42px;
+		left: 0px;
+	}	
+
+	#entrada
+	{
+		width: 92%;
+		left: 40px;
+		top: 240px;
+	}
+
+	textarea
+	{	
+		width: 92%;
+		height: 300px;
+	}
+
+	#salida
+	{
+		width: 90%;
+		min-height: 200px;
+		left: 40px;
+		top: 720px;
+		margin-bottom: 20px;
+	}
+
+	#txtModificado
+	{
+		min-height: 80px;
+		
+	}
+
+	.error
+	{
+		display: inline-block;
+		width: 500px;
+	}
+
+	.boton
+	{
+		width: 45%;
+		height: 60px;	
+	}
+
+	.boton_ml20
+	{	
+		margin-left: 20px;
+	}
+
+	#btnCopiar
+	{
+		width: 90% !important;
+		margin: 20px 0px;
+	}
+
+}
+
+/* 
+  Smarthphones (Portrait)
+  768px
+*/
+
+@media only screen and (max-width: 768px) {
+
+	#logo
+	{
+		height: 45px;
+		top: 73.42px;
+		left: 0px;
+	}	
+
+	#entrada
+	{
+		width: 75%;
+		left: 40px;
+		top: 180px;
+	}
+
+	textarea
+	{	
+		font-size: 24px;
+		width: 92%;
+		height: 300px;
+	}
+
+	#salida
+	{
+		width: 78%;
+		min-height: 200px;
+		left: 40px;
+		top: 800px;
+		margin-bottom: 200px;
+	}
+
+	#txtModificado
+	{
+		min-height: 80px;
+		margin-left: 50px;
+	}
+
+	.error
+	{
+		display: inline-block;
+		width: 500px;
+	}
+
+	.texto
+	{		
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	.boton
+	{
+		width: 100%;
+		height: 60px;	
+	}
+
+	.boton_ml20
+	{	
+		margin-top: 20px;
+	}
+
+	#btnCopiar
+	{
+		width: 90% !important;
+		margin: 20px 0px;
+	}
+
+}
